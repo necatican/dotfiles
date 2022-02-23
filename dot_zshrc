@@ -3,14 +3,13 @@ export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
 export HOMEBREW_PREFIX=/usr/local
 export GOPATH="$HOME/go"
 
+setopt hist_ignore_all_dups inc_append_history
+HISTSIZE=16384
+SAVEHIST=16384
+
 autoload -Uz compinit
 compinit
 
-alias k='kubectl'
-alias ka='kubectl apply -f'
-alias kd='kubectl delete -f'
-alias kg='kubectl get'
-alias kdpo='kubectl delete po --force'
 source <(kubectl completion zsh)
 compdef __start_kubectl k
 
@@ -20,12 +19,13 @@ compdef __start_kubectl k
 autoload -U promptinit; promptinit
 prompt pure
 
+source ~/dotfiles/zsh/zsh_bindings.sh
+source ~/dotfiles/zsh/aliases.sh
+
+for function in ~/dotfiles/zsh/functions/*; do
+  source $function
+done
+
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '\e[A' history-beginning-search-backward # Up arrow key
-bindkey '\e[B' history-beginning-search-forward # Down arrow key
-bindkey "^[[1;2C" forward-word # Shift + Right arrow key
-bindkey "^[[1;2D" backward-word # Shift + Left arrow key
-
-
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
