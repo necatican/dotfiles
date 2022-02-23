@@ -1,14 +1,20 @@
 export HOMEBREW_NO_ANALYTICS=1
-export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
+export HOMEBREW_BREWFILE=~/dotfiles/Brewfile
 export HOMEBREW_PREFIX=/usr/local
+export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
+
 export GOPATH="$HOME/go"
 
 setopt hist_ignore_all_dups inc_append_history
 HISTSIZE=16384
 SAVEHIST=16384
+fpath+=~/dotfiles/zsh/plugins/pure
 
 autoload -Uz compinit
 compinit
+
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+zstyle :prompt:pure:path color 50
 
 source <(kubectl completion zsh)
 compdef __start_kubectl k

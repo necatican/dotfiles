@@ -4,3 +4,6 @@
 [submodule "dotfiles/zsh/plugins/zsh-autosuggestions"]
 	path = dotfiles/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "dotfiles/zsh/plugins/pure"]
+	path = dotfiles/zsh/plugins/pure
+	url = https://github.com/sindresorhus/pure.git
