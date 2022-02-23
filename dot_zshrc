@@ -1,0 +1,31 @@
+export HOMEBREW_NO_ANALYTICS=1
+export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
+export HOMEBREW_PREFIX=/usr/local
+export GOPATH="$HOME/go"
+
+autoload -Uz compinit
+compinit
+
+alias k='kubectl'
+alias ka='kubectl apply -f'
+alias kd='kubectl delete -f'
+alias kg='kubectl get'
+alias kdpo='kubectl delete po --force'
+source <(kubectl completion zsh)
+compdef __start_kubectl k
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U promptinit; promptinit
+prompt pure
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '\e[A' history-beginning-search-backward # Up arrow key
+bindkey '\e[B' history-beginning-search-forward # Down arrow key
+bindkey "^[[1;2C" forward-word # Shift + Right arrow key
+bindkey "^[[1;2D" backward-word # Shift + Left arrow key
+
+
+source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
