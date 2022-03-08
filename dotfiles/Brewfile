@@ -1,4 +1,5 @@
 tap "homebrew/cask-fonts"
+tap "hashicorp/tap"
 
 brew 'autojump'
 brew 'bash'
@@ -35,6 +36,10 @@ brew 'sonobuoy'
 brew 'kubectx'
 brew 'cilium-cli'
 brew 'stern'
+brew "hashicorp/tap/vault"
+brew 'jq'
+brew 'postgresql'
+brew 'ansible-lint'
 
 cask 'firefox'
 cask 'font-fira-code-nerd-font'
