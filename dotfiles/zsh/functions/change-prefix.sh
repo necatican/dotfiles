@@ -6,8 +6,9 @@ change-prefix() {
   _path=${3-$(pwd)}
   _prefix=${1}
   _newPrefix=${2-""}
+  _extension=${4-".*"}
 
-  for f in "${_path%/}"/**/*; do
+  for f in "${_path%/}"/**/*$_extension; do
     _fileName=$(basename "$f")
     if [[ $_fileName == "$_prefix"* ]]; then
       _newFileName="$_newPrefix${_fileName#"$_prefix"}"
