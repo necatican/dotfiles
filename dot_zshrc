@@ -2,7 +2,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_BREWFILE=~/dotfiles/Brewfile
 export HOMEBREW_PREFIX=/usr/local
 export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
-
+export ANSIBLE_HOST_KEY_CHECKING=false
 export GOPATH="$HOME/go"
 
 setopt hist_ignore_all_dups inc_append_history
@@ -10,8 +10,8 @@ HISTSIZE=16384
 SAVEHIST=16384
 fpath+=~/dotfiles/zsh/plugins/pure
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 zstyle :prompt:pure:path color 50
@@ -20,7 +20,6 @@ source <(kubectl completion zsh)
 compdef __start_kubectl k
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -32,6 +31,9 @@ for function in ~/dotfiles/zsh/functions/*; do
   source $function
 done
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+complete -o nospace -C /usr/local/bin/vault vault
