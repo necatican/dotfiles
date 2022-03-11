@@ -41,6 +41,7 @@ brew "hashicorp/tap/vault"
 brew 'jq'
 brew 'postgresql'
 brew 'ansible-lint'
+brew 'pinentry-mac'
 
 cask 'firefox'
 cask 'font-fira-code-nerd-font'

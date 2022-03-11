@@ -4,6 +4,7 @@ export HOMEBREW_PREFIX=/usr/local
 export PATH=~/homebrew/bin:~/homebrew/sbin:$PATH
 export ANSIBLE_HOST_KEY_CHECKING=false
 export GOPATH="$HOME/go"
+export GPG_TTY=$(tty)
 
 fpath+=~/dotfiles/zsh/plugins/pure
 
