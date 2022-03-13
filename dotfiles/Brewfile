@@ -42,6 +42,7 @@ brew 'jq'
 brew 'postgresql'
 brew 'ansible-lint'
 brew 'pinentry-mac'
+brew 'protobuf'
 
 cask 'firefox'
 cask 'font-fira-code-nerd-font'
