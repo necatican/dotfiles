@@ -27,7 +27,7 @@ brew 'kubernetes-cli'
 brew 'kustomize'
 brew 'lima'
 brew 'markdownlint-cli'
-brew 'pinentry-mac'
+brew 'pinentry-mac' # Disable annoying "Save in keychain" checkbox:  `defaults write org.gpgtools.common UseKeychain NO`
 brew 'postgresql'
 brew 'protobuf'
 brew 'shellcheck'
