@@ -12,5 +12,5 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 
 # Docker | https://medium.com/nttlabs/containerd-and-lima-39e0b64d2a59
-alias docker='lima nerdctl' # My brain is hardwired to type docker in certain situations. :(
-alias lnc='lima nerdctl'
+alias docker='start_limactl_if_not_started' # My brain is hardwired to type docker in certain situations. :(
+alias lnc='start_limactl_if_not_started'
