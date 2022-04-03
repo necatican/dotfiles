@@ -1,6 +1,7 @@
 tap 'hashicorp/tap'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
+tap 'ktr0731/evans'
 
 brew 'ansible-lint'
 brew 'ansible'
@@ -11,6 +12,7 @@ brew 'bat'
 brew 'cilium-cli'
 brew 'coreutils'
 brew 'crane'
+brew 'evans'
 brew 'fd'
 brew 'fzf' # $(brew --prefix)/opt/fzf/install
 brew 'gnupg'
