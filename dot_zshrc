@@ -35,4 +35,6 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-complete -o nospace -C /usr/local/bin/vault vault
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
