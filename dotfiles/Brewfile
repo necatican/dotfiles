@@ -38,7 +38,7 @@ brew 'pinentry-mac' # Disable annoying "Save in keychain" checkbox:  `defaults w
 brew 'pipx'
 # brew 'poetry' # Installing with brew doesn’t fare well with pyenv. Use pip
 brew 'protobuf'
-brew 'pyenv' # pyenv install 3.10.6 && pyenv global 3.10.6k
+brew 'pyenv' # pyenv install 3.11.0 && pyenv global 3.11.0
 brew 'python@3.10'
 brew 'shellcheck'
 brew 'sqlite'
