@@ -7,6 +7,7 @@ export GOPATH="$HOME/go"
 export GPG_TTY=$(tty)
 
 fpath+=~/dotfiles/zsh/plugins/pure
+fpath+=~/.zfunc # mkdir ~/.zfunc && poetry completions zsh > ~/.zfunc/_poetry
 
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit

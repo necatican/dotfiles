@@ -19,6 +19,7 @@ brew 'evans'
 brew 'exercism'
 brew 'fd'
 brew 'fzf' # $(brew --prefix)/opt/fzf/install
+brew 'git'
 brew 'gnupg'
 brew 'gnupg2'
 brew 'go'
@@ -34,6 +35,8 @@ brew 'kustomize'
 brew 'lima'
 brew 'markdownlint-cli'
 brew 'pinentry-mac' # Disable annoying "Save in keychain" checkbox:  `defaults write org.gpgtools.common UseKeychain NO`
+brew 'pipx'
+brew 'poetry'
 brew 'protobuf'
 brew 'pyenv' # pyenv install 3.10.6 && pyenv global 3.10.6k
 brew 'python@3.10'
