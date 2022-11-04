@@ -1,7 +1,7 @@
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_BREWFILE=~/dotfiles/Brewfile
 export HOMEBREW_PREFIX=/usr/local
-export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$(go env GOPATH)/bin:$PATH"
+export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@15/bin:$PATH"
 export ANSIBLE_HOST_KEY_CHECKING=false
 export GOPATH="$HOME/go"
 export GPG_TTY=$(tty)
