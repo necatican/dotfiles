@@ -12,6 +12,8 @@ POETRY_HOME=$HOME/.poetry
 export PATH="$PATH:$POETRY_HOME/bin" # curl -sSL https://install.python-poetry.org | POETRY_HOME="$POETRY_HOME" python3 -
 fpath+=~/.zfunc # mkdir ~/.zfunc && poetry completions zsh > ~/.zfunc/_poetry
 
+podman completion -f "${fpath[1]}/_podman" zsh
+
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 

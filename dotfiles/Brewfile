@@ -32,10 +32,10 @@ brew 'krew'
 brew 'kubectx'
 brew 'kubernetes-cli'
 brew 'kustomize'
-brew 'lima'
 brew 'markdownlint-cli'
 brew 'pinentry-mac' # Disable annoying "Save in keychain" checkbox:  `defaults write org.gpgtools.common UseKeychain NO`
 brew 'pipx'
+brew 'podman'
 # brew 'poetry' # Installing with brew doesn’t fare well with pyenv. Use pip
 brew 'protobuf'
 brew 'pyenv' # pyenv install 3.11.0 && pyenv global 3.11.0
