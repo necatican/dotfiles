@@ -7,6 +7,9 @@ export GOPATH="$HOME/go"
 export GPG_TTY=$(tty)
 
 fpath+=~/dotfiles/zsh/plugins/pure
+
+POETRY_HOME=$HOME/.poetry
+export PATH="$PATH:$POETRY_HOME/bin" # curl -sSL https://install.python-poetry.org | POETRY_HOME="$POETRY_HOME" python3 -
 fpath+=~/.zfunc # mkdir ~/.zfunc && poetry completions zsh > ~/.zfunc/_poetry
 
 autoload -Uz compinit && compinit
