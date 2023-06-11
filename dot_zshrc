@@ -20,9 +20,6 @@ autoload -U +X bashcompinit && bashcompinit
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 zstyle :prompt:pure:path color 50
 
-source <(kubectl completion zsh)
-compdef __start_kubectl k
-
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 autoload -U promptinit; promptinit
