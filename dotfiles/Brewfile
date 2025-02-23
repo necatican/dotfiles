@@ -1,7 +1,6 @@
 tap 'hashicorp/tap'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/cask'
 
 brew 'ansible-lint'
 brew 'ansible'
@@ -10,6 +9,7 @@ brew 'bash-completion'
 brew 'bash'
 brew 'chezmoi'
 brew 'coreutils'
+brew 'docker'
 brew 'exercism'
 brew 'fd'
 brew 'fzf' # $(brew --prefix)/opt/fzf/install
@@ -23,12 +23,11 @@ brew 'jq'
 brew 'markdownlint-cli'
 brew 'pinentry-mac' # Disable annoying "Save in keychain" checkbox:  `defaults write org.gpgtools.common UseKeychain NO`
 brew 'pipx'
-brew 'podman'
-# brew 'poetry' # Installing with brew doesn’t fare well with pyenv. Use pip
 brew 'postgresql@15'
 brew 'protobuf'
+# brew 'poetry' # Installing with brew doesn’t fare well with pyenv. Use pip
 brew 'pyenv' # pyenv install 3.11.0 && pyenv global 3.11.0
-brew 'python@3.10'
+brew 'python@3.11'
 brew 'shellcheck'
 brew 'sqlite'
 brew 'telnet'
@@ -56,3 +55,4 @@ cask 'meetingbar'
 cask 'slack'
 cask 'spotify'
 cask 'visual-studio-code'
+
